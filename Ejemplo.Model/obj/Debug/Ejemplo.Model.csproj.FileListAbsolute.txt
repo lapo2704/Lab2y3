@@ -1,0 +1,17 @@
+C:\Users\Roberto\Desktop\2016-2-Groupware-master\AdventureWorks.Demo\Ejemplo.Model\bin\Debug\Ejemplo.Model.dll.config
+C:\Users\Roberto\Desktop\2016-2-Groupware-master\AdventureWorks.Demo\Ejemplo.Model\bin\Debug\Ejemplo.Model.dll
+C:\Users\Roberto\Desktop\2016-2-Groupware-master\AdventureWorks.Demo\Ejemplo.Model\bin\Debug\Ejemplo.Model.pdb
+C:\Users\Roberto\Desktop\2016-2-Groupware-master\AdventureWorks.Demo\Ejemplo.Model\bin\Debug\EntityFramework.dll
+C:\Users\Roberto\Desktop\2016-2-Groupware-master\AdventureWorks.Demo\Ejemplo.Model\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Roberto\Desktop\2016-2-Groupware-master\AdventureWorks.Demo\Ejemplo.Model\bin\Debug\GenericRepository.dll
+C:\Users\Roberto\Desktop\2016-2-Groupware-master\AdventureWorks.Demo\Ejemplo.Model\bin\Debug\GenericRepository.EntityFramework.dll
+C:\Users\Roberto\Desktop\2016-2-Groupware-master\AdventureWorks.Demo\Ejemplo.Model\bin\Debug\EntityFramework.xml
+C:\Users\Roberto\Desktop\2016-2-Groupware-master\AdventureWorks.Demo\Ejemplo.Model\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Roberto\Desktop\2016-2-Groupware-master\AdventureWorks.Demo\Ejemplo.Model\bin\Debug\GenericRepository.xml
+C:\Users\Roberto\Desktop\2016-2-Groupware-master\AdventureWorks.Demo\Ejemplo.Model\bin\Debug\GenericRepository.EntityFramework.xml
+C:\Users\Roberto\Desktop\2016-2-Groupware-master\AdventureWorks.Demo\Ejemplo.Model\obj\Debug\Ejemplo.Model.csprojResolveAssemblyReference.cache
+C:\Users\Roberto\Desktop\2016-2-Groupware-master\AdventureWorks.Demo\Ejemplo.Model\obj\Debug\Ejemplo.Model.dll
+C:\Users\Roberto\Desktop\2016-2-Groupware-master\AdventureWorks.Demo\Ejemplo.Model\obj\Debug\Ejemplo.Model.pdb
+C:\Users\Roberto\Desktop\AdventureWorks.Demo\Ejemplo.Model\obj\Debug\Ejemplo.Model.csprojResolveAssemblyReference.cache
+C:\Users\Roberto\Desktop\AdventureWorks.Demo\Ejemplo.Model\obj\Debug\Ejemplo.Model.dll
+C:\Users\Roberto\Desktop\AdventureWorks.Demo\Ejemplo.Model\obj\Debug\Ejemplo.Model.pdb
