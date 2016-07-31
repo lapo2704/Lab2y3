@@ -88,6 +88,9 @@
     <Compile Include="EmployeeDepartmentHistory.cs">
       <DependentUpon>BaseDeDatos.tt</DependentUpon>
     </Compile>
+    <Compile Include="Enumerados\EnumDepartamentName.cs" />
+    <Compile Include="Enumerados\EnumGroupName.cs" />
+    <Compile Include="Enumerados\EnumPhoneNumberType.cs" />
     <Compile Include="Person.cs">
       <DependentUpon>BaseDeDatos.tt</DependentUpon>
     </Compile>
@@ -99,9 +102,7 @@
     <Compile Include="Tablas\Person.cs" />
     <Compile Include="Tablas\Employee.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Enumerados\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="App.config" />
     <EntityDeploy Include="BaseDeDatos.edmx">

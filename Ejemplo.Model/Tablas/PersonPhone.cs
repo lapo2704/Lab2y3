@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using GenericRepository;
 
 
+
 namespace Ejemplo.Model
 {
     [MetadataType(typeof(PersonPhoneMetadata))]
@@ -15,25 +16,16 @@ namespace Ejemplo.Model
     {
         [NotMapped]
         public int Id { get; set; }
+
         [NotMapped]
-       /* public double SizeInInches {
+       public string PhoneNumberType {
+            
             get {
-                double resultado = 0;
-                bool pudoSerConvertido;
-                switch (this.SizeUnitMeasureCode)
-                { 
-                case "CM":
-                    pudoSerConvertido = double.TryParse(this.Size, out resultado);
-                    if (pudoSerConvertido)
-                        resultado /= 2.2;
-                    break;
-                case "IN":
-                    pudoSerConvertido = double.TryParse(this.Size, out resultado);
-                    if (pudoSerConvertido)
-                        resultado /= 1.0;
-                    break;
-                }
-                return (resultado); } }*/
+                string resultado = "";
+                resultado = Enum.GetEnumDescription((this.PhoneNumberType)value);
+                return (resultado);
+            }
+        }
     }
 
     public class PersonPhoneMetadata
