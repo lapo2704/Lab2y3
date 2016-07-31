@@ -14,15 +14,19 @@ namespace AdventureWorks.Demo.Models
         // automatically whenever you change your model schema, please use data migrations.
         // For more information refer to the documentation:
         // http://msdn.microsoft.com/en-us/data/jj591621.aspx
-    
+
         public AdventureWorksDemoContext() : base("name=AdventureWorksDemoContext")
         {
         }
 
-       /* public System.Data.Entity.DbSet<Ejemplo.Model.Product> Products { get; set; }
+        public System.Data.Entity.DbSet<Ejemplo.Model.Employee> Employee { get; set; }
 
-        public System.Data.Entity.DbSet<Ejemplo.Model.ProductModel> ProductModels { get; set; }
+        public System.Data.Entity.DbSet<Ejemplo.Model.EmployeeDepartmentHistory> EmployeeDepartmentHistory { get; set; }
 
-        public System.Data.Entity.DbSet<Ejemplo.Model.ProductSubcategory> ProductSubcategories { get; set; }*/
+        public System.Data.Entity.DbSet<Ejemplo.Model.Person> Person { get; set; }
+
+        public System.Data.Entity.DbSet<Ejemplo.Model.PersonPhone> PersonPhone { get; set; }
+
+        public System.Data.Entity.DbSet<Ejemplo.Model.Department> Departament { get; set; }
     }
 }
