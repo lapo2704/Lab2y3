@@ -90,6 +90,7 @@
     </Compile>
     <Compile Include="Enumerados\EnumDepartamentName.cs" />
     <Compile Include="Enumerados\EnumGroupName.cs" />
+    <Compile Include="Enumerados\EnumHelper.cs" />
     <Compile Include="Enumerados\EnumPhoneNumberType.cs" />
     <Compile Include="Person.cs">
       <DependentUpon>BaseDeDatos.tt</DependentUpon>

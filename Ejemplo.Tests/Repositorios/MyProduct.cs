@@ -19,11 +19,11 @@ namespace Ejemplo.Tests
             var repositorio = new Ejemplo.BL.Repositorios.Consultas ();
 
             // invocar al método correspondiente
-            var listado = repositorio.GetAllByColor(miColor).ToList();
-            var cantidad = listado.Count();
+           // var listado = repositorio.GetAllByColor(miColor).ToList();
+           // var cantidad = listado.Count();
 
             // compare
-            Assert.AreEqual(valorEsperado, cantidad);
+           // Assert.AreEqual(valorEsperado, cantidad);
         }
     }
 }

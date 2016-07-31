@@ -19,10 +19,10 @@ namespace AdventureWorks.Demo.Models
         {
         }
 
-        public System.Data.Entity.DbSet<Ejemplo.Model.Product> Products { get; set; }
+       /* public System.Data.Entity.DbSet<Ejemplo.Model.Product> Products { get; set; }
 
         public System.Data.Entity.DbSet<Ejemplo.Model.ProductModel> ProductModels { get; set; }
 
-        public System.Data.Entity.DbSet<Ejemplo.Model.ProductSubcategory> ProductSubcategories { get; set; }
+        public System.Data.Entity.DbSet<Ejemplo.Model.ProductSubcategory> ProductSubcategories { get; set; }*/
     }
 }

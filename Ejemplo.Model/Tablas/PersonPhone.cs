@@ -6,14 +6,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using GenericRepository;
-
-
+using Ejemplo.Model.Enumerados;
 
 namespace Ejemplo.Model
 {
     [MetadataType(typeof(PersonPhoneMetadata))]
     public partial class PersonPhone : IEntity
     {
+        int prueba = 1;
         [NotMapped]
         public int Id { get; set; }
 
@@ -22,7 +22,8 @@ namespace Ejemplo.Model
             
             get {
                 string resultado = "";
-                resultado = Enum.GetEnumDescription((this.PhoneNumberType)value);
+                prueba = this.PhoneNumberTypeID;
+                resultado = EnumHelper.GetEnumPhoneNumberType((prueba));
                 return (resultado);
             }
         }
