@@ -16,6 +16,7 @@ namespace Ejemplo.BL.Repositorios
         private IEntityRepository<Person> _myPersonRepository = new EntityRepository<Person>(_myContext);
         private IEntityRepository<PersonPhone> _myPersonPhoneRepository = new EntityRepository<PersonPhone>(_myContext);
         private IEntityRepository<Employee> _myEmployeeRepository = new EntityRepository<Employee>(_myContext);
+        private IEntityRepository<EmployeeDepartmentHistory> _myEmployeeDepartmentHistoryRepository = new EntityRepository<EmployeeDepartmentHistory>(_myContext);
 
         /* Consultas de Person*/
         public IQueryable <Person> ConsultaEmpleadosPorNombreCompleto (string fullName)
@@ -50,9 +51,26 @@ namespace Ejemplo.BL.Repositorios
             return _myEmployeeRepository.FindBy(x => x.AgeInYears >= number1 && x.AgeInYears <= number2);
         }
 
+        public IQueryable<Employee> ConsultaPorNombreGrupo(string grupo)
+        {
+            return _myEmployeeRepository.FindBy(x => x.ActualGroupName.Equals(grupo));
+        }
+
         public IQueryable<Employee> GetAllEmployee()
         {
             return _myEmployeeRepository.GetAll();
+        }
+
+        /*Consulta de EmployeeDepartmentHistory*/
+        public IQueryable<EmployeeDepartmentHistory> ConsultaDepartamentoPorID(int id, int years)
+        {
+            DateTime fecha = new DateTime(DateTime.Today.Year - years, DateTime.Today.Month, DateTime.Today.Day);
+            return _myEmployeeDepartmentHistoryRepository.FindBy(x => x.DepartmentID == id && (x.StartDate >= fecha && (x.EndDate < fecha || x.EndDate == null)));
+        }
+              
+        public IQueryable<EmployeeDepartmentHistory> GetAllEmployeeDepartmentHistory()
+        {
+            return _myEmployeeDepartmentHistoryRepository.GetAll();
         }
     }
 }

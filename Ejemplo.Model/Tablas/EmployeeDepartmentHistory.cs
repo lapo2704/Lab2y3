@@ -27,6 +27,7 @@ namespace Ejemplo.Model
             }
             return result;
         }
+
         public string ActualGroupName(int businessEntityID)
         {
             string result = "";
