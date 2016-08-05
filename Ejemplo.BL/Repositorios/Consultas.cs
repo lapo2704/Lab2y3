@@ -43,13 +43,15 @@ namespace Ejemplo.BL.Repositorios
         /*Consultas de Employee*/
         public IQueryable<Employee> ConsultaEmpleadosPorAntiguedad(int number1, int number2)
         {
-            return _myEmployeeRepository.FindBy(x => x.Antiquity >= number1 && x.Antiquity <= number2);
+            int numero = (DateTime.Today.Year - number2);
+            int numero2 = (DateTime.Today.Year - number1);
+            return _myEmployeeRepository.FindBy(x => x.HireDate.Year >= numero && x.HireDate.Year <= numero2);
         }
 
-        public IQueryable<Employee> ConsultaEmpleadosPorEdad(int fecha1, int fecha2)
+        public IQueryable<Employee> ConsultaEmpleadosPorEdad(int numero1, int numero2)
         {
-            int year = (DateTime.Today.Year - fecha2);
-            int year2 = (DateTime.Today.Year - fecha1);
+            int year = (DateTime.Today.Year - numero2);
+            int year2 = (DateTime.Today.Year - numero1);
             return _myEmployeeRepository.FindBy(x => x.BirthDate.Year >= year && x.BirthDate.Year <= year2);
         }
 
