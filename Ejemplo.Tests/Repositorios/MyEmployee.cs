@@ -67,24 +67,24 @@ namespace Ejemplo.Tests
 
         //}
 
+        //buenoooo
+        //[TestMethod]
+        //public void ConsultarEmpleadosxAntiguedad()
+        //{
+        //    // definir el escenario de la prueba
+        //    int numero1 = 7;
+        //    int numero2 = 9;
+        //    int valorEsperado = 228;
+        //    // repositorio
+        //    var repositorio = new Ejemplo.BL.Repositorios.Consultas();
 
-        [TestMethod]
-        public void ConsultarEmpleadosxAntiguedad()
-        {
-            // definir el escenario de la prueba
-            int numero1 = 7;
-            int numero2 = 9;
-            int valorEsperado = 228;
-            // repositorio
-            var repositorio = new Ejemplo.BL.Repositorios.Consultas();
+        //    // invocar al método correspondiente
+        //    var listado = repositorio.ConsultaEmpleadosPorAntiguedad(numero1, numero2).ToList();
+        //    var cantidad = listado.Count();
 
-            // invocar al método correspondiente
-            var listado = repositorio.ConsultaEmpleadosPorAntiguedad(numero1, numero2).ToList();
-            var cantidad = listado.Count();
-
-            // compare
-            Assert.AreEqual(valorEsperado, cantidad);
-        }
+        //    // compare
+        //    Assert.AreEqual(valorEsperado, cantidad);
+        //}
 
         //buenooo
         //[TestMethod]
