@@ -18,7 +18,7 @@ namespace Ejemplo.Model
     public partial class AdventureWorks2014Entities1 : EntitiesContext
     {
         public AdventureWorks2014Entities1()
-            : base("name=AdventureWorks2014Entities1")
+            : base("name=AdventureWorks2014Entities")
         {
         }
     

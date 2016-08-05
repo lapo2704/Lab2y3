@@ -67,7 +67,8 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="Repositorios\MyProduct.cs" />
+    <Compile Include="Repositorios\MyEmployee.cs" />
+    <Compile Include="Repositorios\MyPerson.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
