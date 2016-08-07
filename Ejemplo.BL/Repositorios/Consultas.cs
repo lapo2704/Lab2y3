@@ -57,15 +57,23 @@ namespace Ejemplo.BL.Repositorios
 
         public IQueryable<Employee> ConsultaPorNombreGrupo(string grupo)
         {
+            // Join con un LinQ del elemento en la historia de departamentos de empleados de aquel registro que traer.
+
+            //Obtiene id del departamento.
+            IEnumerable<Department> getDep = _myDepartmentRepository.FindBy(x => x.GroupName.Contains(grupo));
+            Department dep = getDep.First();
+
+            // Obtiene los registros con los empleados del grupo
+            IEnumerable<EmployeeDepartmentHistory> getEDH = dep.EmployeeDepartmentHistories.Where(x => x.DepartmentID == dep.DepartmentID);
+
+            //-------FALTA-----------
+            //Obtiene los datos de los empleados del grupo.
+            IQueryable<Employee> Resultados = getEDH.GroupJoin(_myEmployeeRepository.GetAll);
+
+
             return _myEmployeeRepository.FindBy(x => x.ActualGroupName.Equals(grupo));
         }
-
-        //public IQueryable<Department> ConsultaPorNombreGrupo(string grupo)
-        //{
-        //    return _myDepartmentRepository.FindBy(x => x.GroupName.Equals(grupo));
-        //}
-
-
+        
         public IQueryable<Employee> GetAllEmployee()
         {
             return _myEmployeeRepository.GetAll();

@@ -130,7 +130,10 @@ namespace Ejemplo.Model
         {
             get
             {
-                return EDH.ActualDepartmentName(this.BusinessEntityID);
+                IEnumerable<EmployeeDepartmentHistory> EDH = this.EmployeeDepartmentHistories.Where(x => x.EndDate == null);
+                EmployeeDepartmentHistory dep = EDH.First();
+                Department miDep = dep.Department;
+                return miDep.Name;
             }
 
         }
@@ -140,7 +143,10 @@ namespace Ejemplo.Model
         {
             get
             {
-                return EDH.ActualGroupName(this.BusinessEntityID);
+                IEnumerable<EmployeeDepartmentHistory> EDH = this.EmployeeDepartmentHistories.Where(x => x.EndDate == null);
+                EmployeeDepartmentHistory dep = EDH.First();
+                Department miDep = dep.Department;
+                return miDep.GroupName;
             }
         }
 
