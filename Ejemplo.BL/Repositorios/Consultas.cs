@@ -55,7 +55,7 @@ namespace Ejemplo.BL.Repositorios
             return _myEmployeeRepository.FindBy(x => x.BirthDate.Year >= year && x.BirthDate.Year <= year2);
         }
 
-        public IQueryable<Employee> ConsultaPorNombreGrupo(string grupo)
+      /*  public IQueryable<Employee> ConsultaPorNombreGrupo(string grupo)
         {
             // Join con un LinQ del elemento en la historia de departamentos de empleados de aquel registro que traer.
 
@@ -72,7 +72,7 @@ namespace Ejemplo.BL.Repositorios
 
 
             return _myEmployeeRepository.FindBy(x => x.ActualGroupName.Equals(grupo));
-        }
+        }*/
         
         public IQueryable<Employee> GetAllEmployee()
         {
@@ -80,11 +80,11 @@ namespace Ejemplo.BL.Repositorios
         }
 
         /*Consulta de EmployeeDepartmentHistory*/
-        public IQueryable<EmployeeDepartmentHistory> ConsultaDepartamentoPorID(int id, int years)
-        {
-            DateTime fecha = new DateTime(DateTime.Today.Year - years, DateTime.Today.Month, DateTime.Today.Day);
-            return _myEmployeeDepartmentHistoryRepository.FindBy(x => x.DepartmentID == id && (x.StartDate >= fecha && (x.EndDate < fecha || x.EndDate == null)));
-        }
+        /* public IQueryable<EmployeeDepartmentHistory> ConsultaDepartamentoPorID(int id, int years)
+         {
+             DateTime fecha = new DateTime(DateTime.Today.Year - years, DateTime.Today.Month, DateTime.Today.Day);
+             return _myEmployeeDepartmentHistoryRepository.FindBy(x => x.DepartmentID == id && (x.StartDate >= fecha && (x.EndDate < fecha || x.EndDate == null)));
+         }*/
 
         public IQueryable<EmployeeDepartmentHistory> GetAllEmployeeDepartmentHistory()
         {

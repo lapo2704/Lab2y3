@@ -3,12 +3,15 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Ejemplo.Model;
 using System.Collections.Generic;
 using System.Linq;
+using GenericRepository.EntityFramework;
 
 namespace Ejemplo.Tests
 {
     [TestClass]
     public class Person
     {
+        /* Metodos de consultas de la logica de negocio */
+
         //[TestMethod]
         //public void ConsultarXFullName()
         //{
@@ -48,6 +51,36 @@ namespace Ejemplo.Tests
         //    // compare
         //    Assert.AreEqual(valorEsperado, cantidad);
         //}
+
+
+        /* Metodos de conusltas de las columnas calculadas */
+
+        [TestMethod]
+        public void ConsultarFullName()
+        {
+
+            // definir el escenario de la prueba
+
+            var person = new Ejemplo.Model.Person();
+            person.Title = "Mr.";
+            person.FirstName = "Jean";
+            person.MiddleName = "Carlo";
+            person.LastName = "Rojas";
+            person.Suffix = "J";           
+
+            string valorEsperado = "Mr. Jean Carlo Rojas J ";
+
+            // repositorio
+            //var persona = new Ejemplo.Model.Person();
+             
+            // invocar al método correspondiente
+            string listado = person.FullName;
+            //var cantidad = listado.Count();
+
+            // compare
+            Assert.AreEqual(valorEsperado, listado);
+
+        }
 
     }
 }
