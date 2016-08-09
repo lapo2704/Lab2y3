@@ -15,38 +15,39 @@ namespace Ejemplo.Model
     {
         [NotMapped]
         public int Id { get; set; }
-        [NotMapped]
-       public string FullName {
-            get {
-                string resultado = "";
 
-                if (Title != null || Title != "" || Title != " ")
-                {
+       // [NotMapped]
+       //public string FullName {
+       //     get {
+       //         string resultado = "";
 
-                    resultado += Title + " ";
-                }
+       //         if (Title != null || Title != "" || Title != " ")
+       //         {
 
-                if (FirstName != null || FirstName != "" || FirstName != " ")
-                {
-                    resultado += FirstName + " ";
-                }
+       //             resultado += Title + " ";
+       //         }
 
-                if (MiddleName != null || MiddleName != "" || MiddleName != " ")
-                {
-                    resultado += MiddleName + " ";
-                }
+       //         if (FirstName != null || FirstName != "" || FirstName != " ")
+       //         {
+       //             resultado += FirstName + " ";
+       //         }
 
-                if (LastName != null || LastName != "" || LastName != " ")
-                {
-                    resultado += LastName + " ";
-                }
+       //         if (MiddleName != null || MiddleName != "" || MiddleName != " ")
+       //         {
+       //             resultado += MiddleName + " ";
+       //         }
 
-                if (Suffix != null || Suffix != "" || Suffix != " ")
-                {
-                    resultado += Suffix + " ";
-                }
+       //         if (LastName != null || LastName != "" || LastName != " ")
+       //         {
+       //             resultado += LastName + " ";
+       //         }
+
+       //         if (Suffix != null || Suffix != "" || Suffix != " ")
+       //         {
+       //             resultado += Suffix + " ";
+       //         }
                 
-                return (resultado); }
+       //         return (resultado); }
         }// Cierra metodo FullName
     }
 

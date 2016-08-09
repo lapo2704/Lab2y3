@@ -13,8 +13,6 @@ namespace Ejemplo.Model
     [MetadataType(typeof(EmployeeDepartmentHistoryMetadata))]
     public partial class EmployeeDepartmentHistory : IEntity
     {
-        Department departamento = new Department();
-
         [NotMapped]
         public int Id { get; set; }
 

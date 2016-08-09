@@ -11,39 +11,38 @@ namespace Ejemplo.Model
 {
     [MetadataType(typeof(PersonPhoneMetadata))]
     public partial class PersonPhone : IEntity
-    {
-        
+    {        
         [NotMapped]
         public int Id { get; set; }
 
-        [NotMapped]
-       public string PhoneNumberType {
+       // [NotMapped]
+       //public string PhoneNumberType {
             
-            get {
-                string resultado = "";
-               resultado = PersonPhoneType(PhoneNumberTypeID);
-                return (resultado);
-            }
-        }
+       //     get {
+       //         string resultado = "";
+       //        resultado = PersonPhoneType(PhoneNumberTypeID);
+       //         return (resultado);
+       //     }
+       // }
 
-        private string PersonPhoneType(int value)
-        {
-            string resultado = "";
-            switch (value)
-            {
-                case 1:
-                    resultado = "Cell";
+       // private string PersonPhoneType(int value)
+       // {
+       //     string resultado = "";
+       //     switch (value)
+       //     {
+       //         case 1:
+       //             resultado = "Cell";
 
-                    break;
-                case 2:
-                    resultado = "Phone";
-                    break;
-                case 3:
-                    resultado = "Work";
-                    break;
-            }
-            return resultado;
-        }
+       //             break;
+       //         case 2:
+       //             resultado = "Phone";
+       //             break;
+       //         case 3:
+       //             resultado = "Work";
+       //             break;
+       //     }
+       //     return resultado;
+       // }
     }
     
     public class PersonPhoneMetadata
