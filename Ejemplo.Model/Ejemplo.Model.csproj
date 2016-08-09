@@ -99,8 +99,6 @@
       <DependentUpon>BaseDeDatos.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Tablas\Department.cs" />
-    <Compile Include="Tablas\EmployeeDepartmentHistory.cs" />
     <Compile Include="Tablas\PersonPhone.cs" />
     <Compile Include="Tablas\Person.cs" />
     <Compile Include="Tablas\Employee.cs" />

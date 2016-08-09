@@ -68,6 +68,7 @@
   </Choose>
   <ItemGroup>
     <Compile Include="Repositorios\MyEmployee.cs" />
+    <Compile Include="Repositorios\MyPersonPhone.cs" />
     <Compile Include="Repositorios\MyPerson.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
