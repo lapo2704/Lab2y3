@@ -16,8 +16,8 @@ namespace Ejemplo.BL.Repositorios
         private IEntityRepository<Person> _myPersonRepository = new EntityRepository<Person>(_myContext);
         private IEntityRepository<PersonPhone> _myPersonPhoneRepository = new EntityRepository<PersonPhone>(_myContext);
         private IEntityRepository<Employee> _myEmployeeRepository = new EntityRepository<Employee>(_myContext);
-       // private IEntityRepository<EmployeeDepartmentHistory> _myEmployeeDepartmentHistoryRepository = new EntityRepository<EmployeeDepartmentHistory>(_myContext);
-        //private IEntityRepository<Department> _myDepartmentRepository = new EntityRepository<Department>(_myContext);
+        private IEntityRepository<EmployeeDepartmentHistory> _myEmployeeDepartmentHistoryRepository = new EntityRepository<EmployeeDepartmentHistory>(_myContext);
+        private IEntityRepository<Department> _myDepartmentRepository = new EntityRepository<Department>(_myContext);
 
         public IQueryable<Person> ConsultaEmpleadosPorNombreCompleto(string fullName)
         {
@@ -55,7 +55,7 @@ namespace Ejemplo.BL.Repositorios
             return _myEmployeeRepository.FindBy(x => x.BirthDate.Year >= year && x.BirthDate.Year <= year2);
         }
 
-      /*  public IQueryable<Employee> ConsultaPorNombreGrupo(string grupo)
+      /* public IQueryable<Employee> ConsultaPorNombreGrupo(string grupo)
         {
             // Join con un LinQ del elemento en la historia de departamentos de empleados de aquel registro que traer.
 
@@ -78,18 +78,6 @@ namespace Ejemplo.BL.Repositorios
         {
             return _myEmployeeRepository.GetAll();
         }
-
-        /*Consulta de EmployeeDepartmentHistory*/
-        /* public IQueryable<EmployeeDepartmentHistory> ConsultaDepartamentoPorID(int id, int years)
-         {
-             DateTime fecha = new DateTime(DateTime.Today.Year - years, DateTime.Today.Month, DateTime.Today.Day);
-             return _myEmployeeDepartmentHistoryRepository.FindBy(x => x.DepartmentID == id && (x.StartDate >= fecha && (x.EndDate < fecha || x.EndDate == null)));
-         }*/
-
-        /* public IQueryable<EmployeeDepartmentHistory> GetAllEmployeeDepartmentHistory()
-          {
-              return _myEmployeeDepartmentHistoryRepository.GetAll();
-          }*/
 
         public IQueryable<Employee> ConsultaTraerEmpleado(int ID)
         {

@@ -12,24 +12,23 @@ namespace Ejemplo.Tests
     {
         /* Metodos de conusltas de las columnas calculadas */
 
-        //buenoooo
-        [TestMethod]
-        public void ConsultarPhoneNumberTypeName()
-        {
+        ////buenoooo
+        //[TestMethod]
+        //public void ConsultarPhoneNumberTypeName()
+        //{
 
-            // definir el escenario de la prueba
-            var person = new Ejemplo.Model.PersonPhone();
-            person.PhoneNumberTypeID = 1;
+        //    // definir el escenario de la prueba
+        //    var person = new Ejemplo.Model.PersonPhone();
+        //    person.PhoneNumberTypeID = 1;
 
-            string valorEsperado = "Cell";
+        //    string valorEsperado = "Cell";
 
-            // invocar al método correspondiente
-            string listado = person.PhoneNumberType;
-            //var cantidad = listado.Count();
+        //    // invocar al método correspondiente
+        //    string listado = person.PhoneNumberType;
+        //    //var cantidad = listado.Count();
 
-            // compare
-            Assert.AreEqual(valorEsperado, listado);
-        }
-
+        //    // compare
+        //    Assert.AreEqual(valorEsperado, listado);
+        //}
     }
 }

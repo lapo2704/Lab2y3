@@ -6,14 +6,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using GenericRepository;
-using Ejemplo.Model.Enumerados;
 
 namespace Ejemplo.Model
 {
     [MetadataType(typeof(PersonPhoneMetadata))]
     public partial class PersonPhone : IEntity
     {
-        int prueba = 1;
+        
         [NotMapped]
         public int Id { get; set; }
 
@@ -22,13 +21,31 @@ namespace Ejemplo.Model
             
             get {
                 string resultado = "";
-                prueba = this.PhoneNumberTypeID;
-                resultado = EnumHelper.GetEnumPhoneNumberType((prueba));
+               resultado = PersonPhoneType(PhoneNumberTypeID);
                 return (resultado);
             }
         }
-    }
 
+        private string PersonPhoneType(int value)
+        {
+            string resultado = "";
+            switch (value)
+            {
+                case 1:
+                    resultado = "Cell";
+
+                    break;
+                case 2:
+                    resultado = "Phone";
+                    break;
+                case 3:
+                    resultado = "Work";
+                    break;
+            }
+            return resultado;
+        }
+    }
+    
     public class PersonPhoneMetadata
     {
 

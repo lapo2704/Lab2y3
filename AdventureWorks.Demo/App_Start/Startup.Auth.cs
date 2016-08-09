@@ -58,11 +58,11 @@ namespace AdventureWorks.Demo
             //   appId: "",
             //   appSecret: "");
 
-            //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
-            //{
-            //    ClientId = "",
-            //    ClientSecret = ""
-            //});
+            app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
+            {
+                ClientId = "876573460617-itkj75cl3skoap4e99uv52oo1bvl1rql.apps.googleusercontent.com",
+                ClientSecret = "01IF7bOms1r2KALsEEdaUuQb"
+            });
         }
     }
 }
