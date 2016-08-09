@@ -10,6 +10,8 @@ namespace Ejemplo.Tests
     public class Employee
 
     {
+        /* Metodos de consultas de la logica de negocio */
+
         // buenooooo
         //[TestMethod]
         //public void ConsultarEmpleadosxTelefono()
@@ -47,7 +49,7 @@ namespace Ejemplo.Tests
         //    Assert.AreEqual(valorEsperado, cantidad);
         //}
 
-        //buenoooo
+        //
         //[TestMethod]
         //public void ConsultarEmpleadoxGrupo()
         //{
@@ -104,6 +106,82 @@ namespace Ejemplo.Tests
         //    // compare
         //    Assert.AreEqual(valorEsperado, cantidad);
         //}
+
+        /* Metodos de conusltas de las columnas calculadas */
+
+        // buenooo
+        //[TestMethod]
+        //public void ConsultarAgeInYears()
+        //{
+        //    // definir el escenario de la prueba
+        //    var employee = new Ejemplo.Model.Employee();
+        //    employee.BirthDate = Convert.ToDateTime("1976-8-9");
+
+        //    int valorEsperado = 40;
+
+        //    // invocar al método correspondiente
+        //    int listado = employee.AgeInYears;
+        //    //var cantidad = listado.Count();
+
+        //    // compare
+        //    Assert.AreEqual(valorEsperado, listado);
+        //}
+
+        // buenooo
+        //[TestMethod]
+        //public void ConsultarAddicionalMonths()
+        //{
+        //    // definir el escenario de la prueba
+        //    var employee = new Ejemplo.Model.Employee();
+        //    employee.BirthDate = Convert.ToDateTime("1976-11-9");
+
+        //    int valorEsperado = 3;
+
+        //    // invocar al método correspondiente
+        //    int listado = employee.AgeInMonths;
+        //    //var cantidad = listado.Count();
+
+        //    // compare
+        //    Assert.AreEqual(valorEsperado, listado);
+        //}
+
+        // buenooo
+        //[TestMethod]
+        //public void ConsultarMartialStatusName()
+        //{
+        //    // definir el escenario de la prueba
+        //    var employee = new Ejemplo.Model.Employee();
+        //    employee.MaritalStatus = "M";
+
+        //    string valorEsperado = "Married";
+
+        //    // invocar al método correspondiente
+        //    string listado = employee.MaritalStatusName;
+        //    //var cantidad = listado.Count();
+
+        //    // compare
+        //    Assert.AreEqual(valorEsperado, listado);
+        //}
+
+        // buenooo
+        //[TestMethod]
+        //public void ConsultarGenderName()
+        //{
+        //    // definir el escenario de la prueba
+        //    var employee = new Ejemplo.Model.Employee();
+        //    employee.Gender = "F";
+
+        //    string valorEsperado = "Female";
+
+        //    // invocar al método correspondiente
+        //    string listado = employee.GenderName;
+        //    //var cantidad = listado.Count();
+
+        //    // compare
+        //    Assert.AreEqual(valorEsperado, listado);
+        //}
+
+     
 
     }
 }

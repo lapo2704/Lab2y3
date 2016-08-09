@@ -12,28 +12,6 @@ namespace Ejemplo.Tests
     {
         /* Metodos de consultas de la logica de negocio */
 
-        //[TestMethod]
-        //public void ConsultarXFullName()
-        //{
-        //    // definir el escenario de la prueba
-        //    string Title= "o";
-        //    string FirstName = "Ken";
-        //    string MidleName = "J";
-        //    string LastName= "Sánchez";
-        //    string Suffix= "o";
-        //    string valorEsperado = "o Ken J Sánchez o";
-        //    // repositorio
-        //    var repositorio = new Ejemplo.Model.Person();
-
-
-        //    // invocar al método correspondiente
-        //    var listado = repositorio.FullName(/*Title,FirstName,MidleName,LastName,Suffix*/);
-        //    //var cantidad = listado.Count();
-
-        //    // compare
-        //    Assert.AreEqual(valorEsperado, listado);
-        //}
-
         //buenoooo
         //[TestMethod]
         //public void ConsultarPersonaCompleta()
@@ -55,32 +33,28 @@ namespace Ejemplo.Tests
 
         /* Metodos de conusltas de las columnas calculadas */
 
-        [TestMethod]
-        public void ConsultarFullName()
-        {
+        //buenoooo
+        //[TestMethod]
+        //  public void ConsultarFullName()
+        //  {
 
-            // definir el escenario de la prueba
+        //      // definir el escenario de la prueba
+        //      var person = new Ejemplo.Model.Person();
+        //      person.Title = "Mr.";
+        //      person.FirstName = "Jean";
+        //      person.MiddleName = "Carlo";
+        //      person.LastName = "Rojas";
+        //      person.Suffix = "J";           
 
-            var person = new Ejemplo.Model.Person();
-            person.Title = "Mr.";
-            person.FirstName = "Jean";
-            person.MiddleName = "Carlo";
-            person.LastName = "Rojas";
-            person.Suffix = "J";           
+        //      string valorEsperado = "Mr. Jean Carlo Rojas J ";
 
-            string valorEsperado = "Mr. Jean Carlo Rojas J ";
+        //      // invocar al método correspondiente
+        //      string listado = person.FullName;
+        //      //var cantidad = listado.Count();
 
-            // repositorio
-            //var persona = new Ejemplo.Model.Person();
-             
-            // invocar al método correspondiente
-            string listado = person.FullName;
-            //var cantidad = listado.Count();
-
-            // compare
-            Assert.AreEqual(valorEsperado, listado);
-
-        }
-
+        //      // compare
+        //      Assert.AreEqual(valorEsperado, listado);
+        //   }
+        
     }
 }

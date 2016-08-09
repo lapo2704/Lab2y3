@@ -30,10 +30,10 @@ namespace Ejemplo.Model
         public int GetDifferenceInYears(DateTime startDate, DateTime endDate)
         {
             //Excel documentation says "COMPLETE calendar years in between dates"
-            int years = endDate.Year - startDate.Year;
+            int years = startDate.Year - endDate.Year ;
 
             if (startDate.Month == endDate.Month &&// if the start month and the end month are the same
-                endDate.Day < startDate.Day)// BUT the end day is less than the start day
+                endDate.Day >= startDate.Day)// BUT the end day is less than the start day
             {
                 years--;
             }
@@ -56,7 +56,7 @@ namespace Ejemplo.Model
         public int GetDifferenceInMonths(DateTime startDate, DateTime endDate)
         {
 
-            int month = endDate.Year - startDate.Year;
+            int month = endDate.Month - startDate.Month;
 
             if (month < 0)
             {
