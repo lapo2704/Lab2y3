@@ -15,9 +15,9 @@ namespace Ejemplo.Model
     using System.Data.Entity.Infrastructure;
 
     
-    public partial class AdventureWorks2014Entities1 : EntitiesContext
+    public partial class AdventureWorks2014Entities : EntitiesContext
     {
-        public AdventureWorks2014Entities1()
+        public AdventureWorks2014Entities()
             : base("name=AdventureWorks2014Entities")
         {
         }

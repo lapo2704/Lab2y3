@@ -49,25 +49,45 @@ namespace Ejemplo.Tests
         //    Assert.AreEqual(valorEsperado, cantidad);
         //}
 
-        //
+        //buenoo
         //[TestMethod]
         //public void ConsultarEmpleadoxGrupo()
         //{
         //    // definir el escenario de la prueba
         //    string grupo = "Manufacturing";
 
-        //    int valorEsperado = 2;
+        //    int valorEsperado = 186;
         //    // repositorio
         //    var repositorio = new Ejemplo.BL.Repositorios.Consultas();
 
         //    // invocar al método correspondiente
         //    var listado = repositorio.ConsultaPorNombreGrupo(grupo).ToList();
-        //    var cantidad = listado.Count();
+        //    int cantidad = listado.Count();
 
         //    // compare
         //    Assert.AreEqual(valorEsperado, cantidad);
 
         //}
+        
+        [TestMethod]
+        public void ConsultarEmpleadoxCodigo()
+        {
+            // definir el escenario de la prueba
+            int cod = 1; int anios = 9;
+
+            int valorEsperado = 1;
+            // repositorio
+            var repositorio = new Ejemplo.BL.Repositorios.Consultas();
+
+            // invocar al método correspondiente
+            var listado = repositorio.ConsultaPorCodigoDepartamento(cod,anios).ToList();
+            int cantidad = listado.Count();
+
+            // compare
+            Assert.AreEqual(valorEsperado, cantidad);
+
+        }
+
 
         //buenoooo
         //[TestMethod]
@@ -217,26 +237,26 @@ namespace Ejemplo.Tests
         //    Assert.AreEqual(valorEsperado, listado);
         //}
 
-        // 
-        [TestMethod]
-        public void ConsultarActualDepartmentName()
-        {
-            // definir el escenario de la prueba
-            var employee = new Ejemplo.Model.Employee();
-            var consulta = new Ejemplo.BL.Repositorios.Consultas();          
+        // fallllllltttttttttttaaaaaaaaaaaaa
+        //[TestMethod]
+        //public void ConsultarActualDepartmentName()
+        //{
+        //    // definir el escenario de la prueba
+        //    var employee = new Ejemplo.Model.Employee();
+        //    var consulta = new Ejemplo.BL.Repositorios.Consultas();          
 
-            string valorEsperado = "Executive";
+        //    string valorEsperado = "Executive";
 
-            // invocar al método correspondiente
-            var empleado = consulta.ConsultaTraerEmpleado(1);
-            employee = empleado.First();
-            string listado = employee.ActualDepartmentName;
-           
-            //employee.BusinessEntityID = 1;
-            
-            // compare
-            Assert.AreEqual(valorEsperado, employee);
-        }
+        //    // invocar al método correspondiente
+        //    var empleado = consulta.ConsultaTraerEmpleado(1);
+        //    employee = empleado.First();
+        //    string listado = employee.ActualDepartmentName;
+
+        //    //employee.BusinessEntityID = 1;
+
+        //    // compare
+        //    Assert.AreEqual(valorEsperado, employee);
+        //}
 
         //[TestMethod]
         //public void ConsultarAgeInYears()

@@ -49,7 +49,6 @@ namespace Ejemplo.Model
                 
        //         return (resultado); }
         }// Cierra metodo FullName
-    }
 
     public class PersonMetadata
     {

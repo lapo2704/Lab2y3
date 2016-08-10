@@ -5,30 +5,21 @@ using System.Text;
 using System.Threading.Tasks;
 using Ejemplo.Model;
 using GenericRepository.EntityFramework;
+using System.Data;
 
 namespace Ejemplo.BL.Repositorios
 {
     public class Consultas
     {
         // contexto estático
-        private static AdventureWorks2014Entities1 _myContext = new AdventureWorks2014Entities1();
+        private static AdventureWorks2014Entities _myContext = new AdventureWorks2014Entities();
         // repositorio privado
         private IEntityRepository<Person> _myPersonRepository = new EntityRepository<Person>(_myContext);
         private IEntityRepository<PersonPhone> _myPersonPhoneRepository = new EntityRepository<PersonPhone>(_myContext);
         private IEntityRepository<Employee> _myEmployeeRepository = new EntityRepository<Employee>(_myContext);
         private IEntityRepository<EmployeeDepartmentHistory> _myEmployeeDepartmentHistoryRepository = new EntityRepository<EmployeeDepartmentHistory>(_myContext);
         private IEntityRepository<Department> _myDepartmentRepository = new EntityRepository<Department>(_myContext);
-
-        public IQueryable<Person> ConsultaEmpleadosPorNombreCompleto(string fullName)
-        {
-            return _myPersonRepository.FindBy(x => x.FirstName.Contains(fullName) || x.LastName.Contains(fullName));
-        }
-
-        public IQueryable<Person> GetAllPerson()
-        {
-            return _myPersonRepository.GetAll();
-        }
-
+        
         /*Conusltas de PersonePhone*/
         public IQueryable<PersonPhone> ConsultaEmpleadosPorTelefono(string number)
         {
@@ -55,25 +46,35 @@ namespace Ejemplo.BL.Repositorios
             return _myEmployeeRepository.FindBy(x => x.BirthDate.Year >= year && x.BirthDate.Year <= year2);
         }
 
-      /* public IQueryable<Employee> ConsultaPorNombreGrupo(string grupo)
+        public List<IQueryable<Employee>> ConsultaPorNombreGrupo(string grupo)
         {
-            // Join con un LinQ del elemento en la historia de departamentos de empleados de aquel registro que traer.
+            var query =
+                        from depart in _myDepartmentRepository.GetAll().AsEnumerable()
+                        join edh in _myEmployeeDepartmentHistoryRepository.GetAll().AsEnumerable() on depart.DepartmentID equals edh.DepartmentID
+                        join employee in _myEmployeeRepository.GetAll().AsEnumerable() on edh.BusinessEntityID equals employee.BusinessEntityID
+                        where edh.EndDate == null && grupo == depart.GroupName
+                        select GetAllEmployee();
 
-            //Obtiene id del departamento.
-            IEnumerable<Department> getDep = _myDepartmentRepository.FindBy(x => x.GroupName.Contains(grupo));
-            Department dep = getDep.First();
+            return query.ToList();
+        }
 
-            // Obtiene los registros con los empleados del grupo
-            IEnumerable<EmployeeDepartmentHistory> getEDH = dep.EmployeeDepartmentHistories.Where(x => x.DepartmentID == dep.DepartmentID);
+        public List<IQueryable<Employee>> ConsultaPorCodigoDepartamento(int id, int años)
+        {
+            int year = (DateTime.Today.Year - años);
+            int years = DateTime.Today.Year;
+            DateTime date = new DateTime(year, DateTime.Today.Month, DateTime.Today.Day);
 
-            //-------FALTA-----------
-            //Obtiene los datos de los empleados del grupo.
-            IQueryable<Employee> Resultados = getEDH.GroupJoin(_myEmployeeRepository.GetAll);
+            var query =
+                        from depart in _myDepartmentRepository.GetAll().AsEnumerable()
+                        join edh in _myEmployeeDepartmentHistoryRepository.GetAll().AsEnumerable() on depart.DepartmentID equals edh.DepartmentID
+                        join employee in _myEmployeeRepository.GetAll().AsEnumerable() on edh.BusinessEntityID equals employee.BusinessEntityID
+                        // where (edh.StartDate.Year >= year && (edh.EndDate == null))
+                        where (edh.StartDate <= date && (edh.EndDate <= DateTime.Today || (edh.EndDate == null)))
+                        select GetAllEmployee();
 
+            return query.ToList();
+        }
 
-            return _myEmployeeRepository.FindBy(x => x.ActualGroupName.Equals(grupo));
-        }*/
-        
         public IQueryable<Employee> GetAllEmployee()
         {
             return _myEmployeeRepository.GetAll();
