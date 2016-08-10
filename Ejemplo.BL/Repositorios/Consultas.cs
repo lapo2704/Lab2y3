@@ -68,8 +68,7 @@ namespace Ejemplo.BL.Repositorios
                           from depart in _myDepartmentRepository.GetAll().AsEnumerable()
                           join edh in _myEmployeeDepartmentHistoryRepository.GetAll().AsEnumerable() on depart.DepartmentID equals edh.DepartmentID
                           join employee in _myEmployeeRepository.GetAll().AsEnumerable() on edh.BusinessEntityID equals employee.BusinessEntityID
-                          // where (edh.StartDate.Year >= year && (edh.EndDate == null))
-                          where (depart.DepartmentID == id) && ((edh.StartDate > date) || (edh.EndDate == null))
+                          where (depart.DepartmentID == id) && ((edh.StartDate >= date) || (edh.EndDate == null) || (edh.EndDate >= date))
                           select GetAllEmployee();
 
               return query.ToList();
