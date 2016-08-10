@@ -59,22 +59,22 @@ namespace Ejemplo.BL.Repositorios
         }
 
         public List<IQueryable<Employee>> ConsultaPorCodigoDepartamento(int id, int años)
-        {
-            int year = (DateTime.Today.Year - años);
-            int years = DateTime.Today.Year;
-            DateTime date = new DateTime(year, DateTime.Today.Month, DateTime.Today.Day);
+          {
+              int year = (DateTime.Today.Year - años);
+              int years = DateTime.Today.Year;
+              DateTime date = new DateTime(year, DateTime.Today.Month, DateTime.Today.Day);
 
-            var query =
-                        from depart in _myDepartmentRepository.GetAll().AsEnumerable()
-                        join edh in _myEmployeeDepartmentHistoryRepository.GetAll().AsEnumerable() on depart.DepartmentID equals edh.DepartmentID
-                        join employee in _myEmployeeRepository.GetAll().AsEnumerable() on edh.BusinessEntityID equals employee.BusinessEntityID
-                        // where (edh.StartDate.Year >= year && (edh.EndDate == null))
-                        where (edh.StartDate <= date && (edh.EndDate <= DateTime.Today || (edh.EndDate == null)))
-                        select GetAllEmployee();
+              var query =
+                          from depart in _myDepartmentRepository.GetAll().AsEnumerable()
+                          join edh in _myEmployeeDepartmentHistoryRepository.GetAll().AsEnumerable() on depart.DepartmentID equals edh.DepartmentID
+                          join employee in _myEmployeeRepository.GetAll().AsEnumerable() on edh.BusinessEntityID equals employee.BusinessEntityID
+                          // where (edh.StartDate.Year >= year && (edh.EndDate == null))
+                          where (depart.DepartmentID == id) && ((edh.StartDate > date) || (edh.EndDate == null))
+                          select GetAllEmployee();
 
-            return query.ToList();
-        }
-
+              return query.ToList();
+          }
+     
         public IQueryable<Employee> GetAllEmployee()
         {
             return _myEmployeeRepository.GetAll();

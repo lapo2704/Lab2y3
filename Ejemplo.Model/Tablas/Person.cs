@@ -16,42 +16,46 @@ namespace Ejemplo.Model
         [NotMapped]
         public int Id { get; set; }
 
-       // [NotMapped]
-       //public string FullName {
-       //     get {
-       //         string resultado = "";
+        [NotMapped]
+        public string FullName
+        {
+            get
+            {
+                string resultado = "";
 
-       //         if (Title != null || Title != "" || Title != " ")
-       //         {
+                if (Title != null || Title != "" || Title != " ")
+                {
 
-       //             resultado += Title + " ";
-       //         }
+                    resultado += Title + " ";
+                }
 
-       //         if (FirstName != null || FirstName != "" || FirstName != " ")
-       //         {
-       //             resultado += FirstName + " ";
-       //         }
+                if (FirstName != null || FirstName != "" || FirstName != " ")
+                {
+                    resultado += FirstName + " ";
+                }
 
-       //         if (MiddleName != null || MiddleName != "" || MiddleName != " ")
-       //         {
-       //             resultado += MiddleName + " ";
-       //         }
+                if (MiddleName != null || MiddleName != "" || MiddleName != " ")
+                {
+                    resultado += MiddleName + " ";
+                }
 
-       //         if (LastName != null || LastName != "" || LastName != " ")
-       //         {
-       //             resultado += LastName + " ";
-       //         }
+                if (LastName != null || LastName != "" || LastName != " ")
+                {
+                    resultado += LastName + " ";
+                }
 
-       //         if (Suffix != null || Suffix != "" || Suffix != " ")
-       //         {
-       //             resultado += Suffix + " ";
-       //         }
-                
-       //         return (resultado); }
+                if (Suffix != null || Suffix != "" || Suffix != " ")
+                {
+                    resultado += Suffix + " ";
+                }
+
+                return (resultado);
+            }
         }// Cierra metodo FullName
 
-    public class PersonMetadata
-    {
+        public class PersonMetadata
+        {
 
+        }
     }
 }

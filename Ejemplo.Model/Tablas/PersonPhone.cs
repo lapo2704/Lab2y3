@@ -15,34 +15,36 @@ namespace Ejemplo.Model
         [NotMapped]
         public int Id { get; set; }
 
-       // [NotMapped]
-       //public string PhoneNumberType {
-            
-       //     get {
-       //         string resultado = "";
-       //        resultado = PersonPhoneType(PhoneNumberTypeID);
-       //         return (resultado);
-       //     }
-       // }
+        [NotMapped]
+        public string PhoneNumberType
+        {
 
-       // private string PersonPhoneType(int value)
-       // {
-       //     string resultado = "";
-       //     switch (value)
-       //     {
-       //         case 1:
-       //             resultado = "Cell";
+            get
+            {
+                string resultado = "";
+                resultado = PersonPhoneType(PhoneNumberTypeID);
+                return (resultado);
+            }
+        }
 
-       //             break;
-       //         case 2:
-       //             resultado = "Phone";
-       //             break;
-       //         case 3:
-       //             resultado = "Work";
-       //             break;
-       //     }
-       //     return resultado;
-       // }
+        private string PersonPhoneType(int value)
+        {
+            string resultado = "";
+            switch (value)
+            {
+                case 1:
+                    resultado = "Cell";
+
+                    break;
+                case 2:
+                    resultado = "Phone";
+                    break;
+                case 3:
+                    resultado = "Work";
+                    break;
+            }
+            return resultado;
+        }
     }
     
     public class PersonPhoneMetadata

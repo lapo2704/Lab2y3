@@ -17,153 +17,153 @@ namespace Ejemplo.Model
         [NotMapped]
         public int Id { get; set; }
 
-    //    [NotMapped]
-    //    public int AgeInYears
-    //    {
-    //        get
-    //        {
-    //            return GetDifferenceInYears(DateTime.Today, BirthDate);
-    //        }
-    //    } // Cierra metodo Age in years
+        [NotMapped]
+        public int AgeInYears
+        {
+            get
+            {
+                return GetDifferenceInYears(DateTime.Today, BirthDate);
+            }
+        } // Cierra metodo Age in years
 
-    //    public int GetDifferenceInYears(DateTime startDate, DateTime endDate)
-    //    {
-    //        //Excel documentation says "COMPLETE calendar years in between dates"
-    //        int years = startDate.Year - endDate.Year ;
+        public int GetDifferenceInYears(DateTime startDate, DateTime endDate)
+        {
+            //Excel documentation says "COMPLETE calendar years in between dates"
+            int years = startDate.Year - endDate.Year;
 
-    //        if (startDate.Month == endDate.Month &&// if the start month and the end month are the same
-    //            endDate.Day > startDate.Day)// BUT the end day is less than the start day
-    //        {
-    //            years--;
-    //        }
-    //        else if (endDate.Month < startDate.Month)// if the end month is less than the start month
-    //        {
-    //            years--;
-    //        }
-    //        return years;
-    //    } // Cierra metodo Get Difference in years
+            if (startDate.Month == endDate.Month &&// if the start month and the end month are the same
+                endDate.Day > startDate.Day)// BUT the end day is less than the start day
+            {
+                years--;
+            }
+            else if (endDate.Month < startDate.Month)// if the end month is less than the start month
+            {
+                years--;
+            }
+            return years;
+        } // Cierra metodo Get Difference in years
 
-    //    [NotMapped]
-    //    public int AgeInMonths
-    //    {
-    //        get
-    //        {
-    //            return GetDifferenceInMonths(DateTime.Today, BirthDate);
-    //        }
-    //    } // Cierra metodo Age in Months
+        [NotMapped]
+        public int AgeInMonths
+        {
+            get
+            {
+                return GetDifferenceInMonths(DateTime.Today, BirthDate);
+            }
+        } // Cierra metodo Age in Months
 
-    //    public int GetDifferenceInMonths(DateTime startDate, DateTime endDate)
-    //    {
+        public int GetDifferenceInMonths(DateTime startDate, DateTime endDate)
+        {
 
-    //        int month = endDate.Month - startDate.Month;
-          
-    //        if (month < 0)
-    //        {
-    //            month = month + 12;
-    //        }
-    //        return month;
-    //    } // Cierra metodo get difference in months
+            int month = endDate.Month - startDate.Month;
 
-    //    [NotMapped]
-    //    public string MaritalStatusName
-    //    {
-    //        get
-    //        {
-    //            string resultado = "";
+            if (month < 0)
+            {
+                month = month + 12;
+            }
+            return month;
+        } // Cierra metodo get difference in months
 
-    //            switch (this.MaritalStatus)
-    //            {
-    //                case "M":
-    //                    resultado = "Married";
-    //                    break;
+        [NotMapped]
+        public string MaritalStatusName
+        {
+            get
+            {
+                string resultado = "";
 
-    //                case "S":
-    //                    resultado = "Single";
-    //                    break;
-    //            }
-    //            return (resultado);
-    //        }
-    //    } //  Cierra metodo Marital Status Name
+                switch (this.MaritalStatus)
+                {
+                    case "M":
+                        resultado = "Married";
+                        break;
 
-    //    [NotMapped]
-    //    public string GenderName
-    //    {
-    //        get
-    //        {
-    //            string resultado = "";
+                    case "S":
+                        resultado = "Single";
+                        break;
+                }
+                return (resultado);
+            }
+        } //  Cierra metodo Marital Status Name
 
-    //            switch (this.Gender)
-    //            {
-    //                case "M":
-    //                    resultado = "Male";
-    //                    break;
+        [NotMapped]
+        public string GenderName
+        {
+            get
+            {
+                string resultado = "";
 
-    //                case "F":
-    //                    resultado = "Female";
-    //                    break;
-    //            }
-    //            return (resultado);
-    //        }
-    //    } //  Cierra metodo Gender Name
+                switch (this.Gender)
+                {
+                    case "M":
+                        resultado = "Male";
+                        break;
 
-    //    [NotMapped]
-    //    public int Antiquity
-    //    {
-    //        get
-    //        {
-    //            return GetDifferenceAntiquityInYears(DateTime.Today, HireDate);
-    //        }
-    //    } // Cierra metodo Antiquity
+                    case "F":
+                        resultado = "Female";
+                        break;
+                }
+                return (resultado);
+            }
+        } //  Cierra metodo Gender Name
 
-    //    public int GetDifferenceAntiquityInYears(DateTime startDate, DateTime endDate)
-    //    {
-    //        //Excel documentation says "COMPLETE calendar years in between dates"
-    //        int years = startDate.Year - endDate.Year;
+        [NotMapped]
+        public int Antiquity
+        {
+            get
+            {
+                return GetDifferenceAntiquityInYears(DateTime.Today, HireDate);
+            }
+        } // Cierra metodo Antiquity
 
-    //        if (startDate.Month == endDate.Month &&// if the start month and the end month are the same
-    //            endDate.Day > startDate.Day)// BUT the end day is less than the start day
-    //        {
-    //            years--;
-    //        }
-    //        else if (endDate.Month > startDate.Month)// if the end month is less than the start month
-    //        {
-    //            years--;
-    //        }
-    //        return years;
-    //    } // Cierra metodo Get Difference in years
+        public int GetDifferenceAntiquityInYears(DateTime startDate, DateTime endDate)
+        {
+            //Excel documentation says "COMPLETE calendar years in between dates"
+            int years = startDate.Year - endDate.Year;
 
-    //    [NotMapped]
-    //    public int AdditionalAntitiquityMonths
-    //    {
-    //        get
-    //        {
-    //            return GetDifferenceInMonths(DateTime.Today, HireDate);
-    //        }
-    //    } // Cierra metodo Additional Antitiquity Months
+            if (startDate.Month == endDate.Month &&// if the start month and the end month are the same
+                endDate.Day > startDate.Day)// BUT the end day is less than the start day
+            {
+                years--;
+            }
+            else if (endDate.Month > startDate.Month)// if the end month is less than the start month
+            {
+                years--;
+            }
+            return years;
+        } // Cierra metodo Get Difference in years
 
-    //    [NotMapped]
-    //    public string ActualDepartmentName
-    //    {
-    //        get
-    //        {
-    //            IEnumerable<EmployeeDepartmentHistory> EDH = this.EmployeeDepartmentHistories.Where(x => x.EndDate != null);
-    //            EmployeeDepartmentHistory dep = EDH.First();
-    //            Department miDep = dep.Department;
-    //            return miDep.Name;
-    //        }
-    //    }
+        [NotMapped]
+        public int AdditionalAntitiquityMonths
+        {
+            get
+            {
+                return GetDifferenceInMonths(DateTime.Today, HireDate);
+            }
+        } // Cierra metodo Additional Antitiquity Months
 
-    //    [NotMapped]
-    //    public string ActualGroupName
-    //    {
-    //        get
-    //        {
-    //            IEnumerable<EmployeeDepartmentHistory> EDH = this.EmployeeDepartmentHistories.Where(x => x.EndDate == null);
-    //            EmployeeDepartmentHistory dep = EDH.First();
-    //            Department miDep = dep.Department;
-    //            return miDep.GroupName;
-    //        }
-    //    }
+        [NotMapped]
+        public string ActualDepartmentName
+        {
+            get
+            {
+                IEnumerable<EmployeeDepartmentHistory> EDH = this.EmployeeDepartmentHistories.Where(x => x.EndDate != null);
+                EmployeeDepartmentHistory dep = EDH.First();
+                Department miDep = dep.Department;
+                return miDep.Name;
+            }
+        }
+
+        [NotMapped]
+        public string ActualGroupName
+        {
+            get
+            {
+                IEnumerable<EmployeeDepartmentHistory> EDH = this.EmployeeDepartmentHistories.Where(x => x.EndDate == null);
+                EmployeeDepartmentHistory dep = EDH.First();
+                Department miDep = dep.Department;
+                return miDep.GroupName;
+            }
+        }
 
     }// Cierra clase
 

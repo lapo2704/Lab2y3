@@ -60,8 +60,8 @@ namespace AdventureWorks.Demo
 
             app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
             {
-                ClientId = "876573460617-itkj75cl3skoap4e99uv52oo1bvl1rql.apps.googleusercontent.com",
-                ClientSecret = "01IF7bOms1r2KALsEEdaUuQb"
+                ClientId = "876573460617-22c1qnorgmbuj52kf4f9tjf85ktrf8n7.apps.googleusercontent.com",
+                ClientSecret = "5wYqCv6CXZpm_kDilzcxFlbC"
             });
         }
     }
