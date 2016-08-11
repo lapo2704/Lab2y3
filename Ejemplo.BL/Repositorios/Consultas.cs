@@ -77,6 +77,18 @@ namespace Ejemplo.BL.Repositorios
         {
             return _myEmployeeRepository.GetAll();
         }
-                    
+
+        /*Consultas de Person*/
+
+        public IQueryable<Person> ConsultaEmpleadosPorNombreCompleto (string name)
+        {
+            return _myPersonRepository.FindBy(x => x.FirstName.Contains(name) || x.LastName.Contains(name));
+        }
+
+        public IQueryable<Person> GetAllPerson()
+        {
+            return _myPersonRepository.GetAll();
+        }
+        
     }
 }

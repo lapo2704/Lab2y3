@@ -12,7 +12,7 @@ namespace Ejemplo.Tests
     {
         /* Metodos de consultas de la logica de negocio */
 
-        //buenoooo
+       // buenoooo
         //[TestMethod]
         //public void ConsultarPersonaCompleta()
         //{
@@ -55,6 +55,6 @@ namespace Ejemplo.Tests
         //      // compare
         //      Assert.AreEqual(valorEsperado, listado);
         //   }
-        
+
     }
 }
