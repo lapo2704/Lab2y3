@@ -61,7 +61,6 @@ namespace Ejemplo.BL.Repositorios
         public List<IQueryable<Employee>> ConsultaPorCodigoDepartamento(int id, int años)
           {
               int year = (DateTime.Today.Year - años);
-              int years = DateTime.Today.Year;
               DateTime date = new DateTime(year, DateTime.Today.Month, DateTime.Today.Day);
 
               var query =
@@ -78,11 +77,6 @@ namespace Ejemplo.BL.Repositorios
         {
             return _myEmployeeRepository.GetAll();
         }
-
-        public IQueryable<Employee> ConsultaTraerEmpleado(int ID)
-        {
-            return _myEmployeeRepository.FindBy(x => x.BusinessEntityID == ID);
-        }
-
+                    
     }
 }

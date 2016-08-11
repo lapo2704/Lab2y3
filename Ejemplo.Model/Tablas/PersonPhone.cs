@@ -47,7 +47,7 @@ namespace Ejemplo.Model
         }
     }
     
-    public class PersonPhoneMetadata
+    public class PersonPhoneMetadata : 
     {
 
     }

@@ -180,62 +180,62 @@ namespace Ejemplo.Tests
         //    Assert.AreEqual(valorEsperado, listado);
         //}
 
-       // //buenooo
-       //[TestMethod]
-       // public void ConsultarAntiquity()
-       // {
-       //     // definir el escenario de la prueba
-       //     var employee = new Ejemplo.Model.Employee();
-       //     employee.HireDate = Convert.ToDateTime("2009-7-9");
-
-       //     int valorEsperado = 7;
-
-       //     // invocar al método correspondiente
-       //     int listado = employee.Antiquity;
-       //     //var cantidad = listado.Count();
-
-       //     // compare
-       //     Assert.AreEqual(valorEsperado, listado);
-       // }
-
-       // buenooo
-       //[TestMethod]
-       // public void ConsultarAdditionalAntiquityInMonths()
-       // {
-       //     // definir el escenario de la prueba
-       //     var employee = new Ejemplo.Model.Employee();
-       //     employee.HireDate = Convert.ToDateTime("2009-4-9");
-
-       //     int valorEsperado = 1;
-
-       //     // invocar al método correspondiente
-       //     int listado = employee.AdditionalAntitiquityMonths;
-       //     //var cantidad = listado.Count();
-
-       //     // compare
-       //     Assert.AreEqual(valorEsperado, listado);
-       // }
-
-        //FALTA
+        // //buenooo
         //[TestMethod]
-        // public void ConsultarActualDepartmentName()
+        // public void ConsultarAntiquity()
         // {
         //     // definir el escenario de la prueba
         //     var employee = new Ejemplo.Model.Employee();
-        //     var consulta = new Ejemplo.BL.Repositorios.Consultas();
+        //     employee.HireDate = Convert.ToDateTime("2009-7-9");
 
-        //     string valorEsperado = "Executive";
+        //     int valorEsperado = 7;
 
         //     // invocar al método correspondiente
-        //     var empleado = consulta.ConsultaTraerEmpleado(1);
-        //     employee = empleado.First();
-        //     string listado = employee.ActualDepartmentName;
-
-        //     //employee.BusinessEntityID = 1;
+        //     int listado = employee.Antiquity;
+        //     //var cantidad = listado.Count();
 
         //     // compare
-        //     Assert.AreEqual(valorEsperado, employee);
+        //     Assert.AreEqual(valorEsperado, listado);
         // }
+
+        // buenooo
+        //[TestMethod]
+        // public void ConsultarAdditionalAntiquityInMonths()
+        // {
+        //     // definir el escenario de la prueba
+        //     var employee = new Ejemplo.Model.Employee();
+        //     employee.HireDate = Convert.ToDateTime("2009-4-9");
+
+        //     int valorEsperado = 1;
+
+        //     // invocar al método correspondiente
+        //     int listado = employee.AdditionalAntitiquityMonths;
+        //     //var cantidad = listado.Count();
+
+        //     // compare
+        //     Assert.AreEqual(valorEsperado, listado);
+        // }
+
+        //FALTA
+        [TestMethod]
+        public void ConsultarActualDepartmentName()
+        {
+            // definir el escenario de la prueba
+            var employee = new Ejemplo.Model.Employee();
+            var consulta = new Ejemplo.BL.Repositorios.Consultas();
+
+            string valorEsperado = "Executive";
+
+            // invocar al método correspondiente
+            //var empleado = consulta.ConsultaTraerEmpleado(1);
+            //employee = empleado.First();
+            string listado = employee.ActualDepartmentName;
+
+            //employee.BusinessEntityID = 1;
+
+            // compare
+            Assert.AreEqual(valorEsperado, employee);
+        }
 
         //// FALTA
         //[TestMethod]

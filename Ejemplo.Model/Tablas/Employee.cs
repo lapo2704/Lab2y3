@@ -141,15 +141,22 @@ namespace Ejemplo.Model
             }
         } // Cierra metodo Additional Antitiquity Months
 
+
         [NotMapped]
         public string ActualDepartmentName
         {
             get
             {
-                IEnumerable<EmployeeDepartmentHistory> EDH = this.EmployeeDepartmentHistories.Where(x => x.EndDate != null);
-                EmployeeDepartmentHistory dep = EDH.First();
-                Department miDep = dep.Department;
-                return miDep.Name;
+                //IEnumerable<EmployeeDepartmentHistory> EDH = this.EmployeeDepartmentHistories.Where(x => x.EndDate == null);
+                //EmployeeDepartmentHistory dep = EDH.First();
+                //Department miDep = dep.Department;
+                //return miDep.Name;
+                var query =
+                        from edh in EmployeeDepartmentHistories
+                        where edh.EndDate == null
+                        select edh.Department.Name;
+
+                return query.First();
             }
         }
 
@@ -158,10 +165,17 @@ namespace Ejemplo.Model
         {
             get
             {
-                IEnumerable<EmployeeDepartmentHistory> EDH = this.EmployeeDepartmentHistories.Where(x => x.EndDate == null);
-                EmployeeDepartmentHistory dep = EDH.First();
-                Department miDep = dep.Department;
-                return miDep.GroupName;
+                //IEnumerable<EmployeeDepartmentHistory> EDH = this.EmployeeDepartmentHistories.Where(x => x.EndDate == null);
+                //EmployeeDepartmentHistory dep = EDH.First();
+                //Department miDep = dep.Department;
+                //return miDep.GroupName;
+
+                 var query =
+                          from edh in EmployeeDepartmentHistories                          
+                          where edh.EndDate == null
+                          select edh.Department.Name ;
+
+              return query.First();
             }
         }
 

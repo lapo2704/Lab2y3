@@ -28,4 +28,3 @@ C:\Users\Roberto\Source\Repos\Lab2y3\Ejemplo.Model\bin\Debug\GenericRepository.x
 C:\Users\Roberto\Source\Repos\Lab2y3\Ejemplo.Model\bin\Debug\GenericRepository.EntityFramework.xml
 C:\Users\Roberto\Source\Repos\Lab2y3\Ejemplo.Model\obj\Debug\Ejemplo.Model.dll
 C:\Users\Roberto\Source\Repos\Lab2y3\Ejemplo.Model\obj\Debug\Ejemplo.Model.pdb
-C:\Users\Roberto\Source\Repos\Lab2y3\Ejemplo.Model\obj\Debug\Ejemplo.Model.csprojResolveAssemblyReference.cache
