@@ -53,7 +53,7 @@ namespace Ejemplo.Model
         public int GetDifferenceInMonths(DateTime startDate, DateTime endDate)
         {
 
-            int month = endDate.Month - startDate.Month;
+            int month = startDate.Month - endDate.Month ;
 
             if (month < 0)
             {

@@ -12,7 +12,7 @@ namespace Ejemplo.Tests
     {
         /* Metodos de consultas de la logica de negocio */
 
-       // buenoooo
+        // buenoooo
         //[TestMethod]
         //public void ConsultarPersonaCompleta()
         //{
@@ -30,31 +30,29 @@ namespace Ejemplo.Tests
         //    Assert.AreEqual(valorEsperado, cantidad);
         //}
 
-
         /* Metodos de conusltas de las columnas calculadas */
 
         //buenoooo
         //[TestMethod]
-        //  public void ConsultarFullName()
-        //  {
+        //public void ConsultarFullName()
+        //{
+        //    // definir el escenario de la prueba
+        //    var person = new Ejemplo.Model.Person();
+        //    person.Title = "Mr.";
+        //    person.FirstName = "Jean";
+        //    person.MiddleName = "Carlo";
+        //    person.LastName = "Rojas";
+        //    person.Suffix = " J";
 
-        //      // definir el escenario de la prueba
-        //      var person = new Ejemplo.Model.Person();
-        //      person.Title = "Mr.";
-        //      person.FirstName = "Jean";
-        //      person.MiddleName = "Carlo";
-        //      person.LastName = "Rojas";
-        //      person.Suffix = "J";           
+        //    string valorEsperado = "Mr. Jean Carlo Rojas  J ";
 
-        //      string valorEsperado = "Mr. Jean Carlo Rojas J ";
+        //    // invocar al método correspondiente
+        //    string listado = person.FullName;
+        //    //var cantidad = listado.Count();
 
-        //      // invocar al método correspondiente
-        //      string listado = person.FullName;
-        //      //var cantidad = listado.Count();
-
-        //      // compare
-        //      Assert.AreEqual(valorEsperado, listado);
-        //   }
+        //    // compare
+        //    Assert.AreEqual(valorEsperado, listado);
+        //}
 
     }
 }
